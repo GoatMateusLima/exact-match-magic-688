@@ -48,7 +48,7 @@ export function Navbar() {
       <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-between">
         <a href="#inicio" className="flex items-center gap-2 font-mono font-bold text-white">
           <span>MLB</span>
-          <Star size={14} />
+          <Star />
         </a>
 
         <nav className="hidden md:flex items-center gap-6">
