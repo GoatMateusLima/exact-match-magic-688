@@ -16,11 +16,12 @@ export function AboutMe() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="flex flex-col items-center md:items-start"
         >
-          <div
-            className="w-60 h-60 rounded-full bg-[var(--color-surface)] border-2 border-[var(--color-accent)] flex items-center justify-center"
-            style={{ boxShadow: "0 0 40px rgba(224,92,42,0.2)" }}
-          >
-            <span className="font-[var(--font-display)] text-[var(--color-accent)] text-5xl font-bold">MLB</span>
+          <div className="w-60 h-60 rounded-full overflow-hidden border-2 border-[var(--color-accent)]" style={{ boxShadow: "0 0 40px rgba(224,92,42,0.2)" }}>
+            <img
+              src={profileAsset.url}
+              alt="Mateus Lima Bispo"
+              className="w-full h-full object-cover"
+            />
           </div>
           <p className="font-mono text-xs text-[var(--color-text-secondary)] text-center mt-4 w-full">
             📍 São Carlos, SP
