@@ -2,17 +2,22 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import starAsset from "@/assets/star.png.asset.json";
 
-const links = [
+const leftLinks = [
   { label: "INÍCIO", href: "#inicio" },
   { label: "SOBRE", href: "#sobre" },
   { label: "FORMAÇÃO", href: "#formacao" },
+];
+
+const rightLinks = [
   { label: "SKILLS", href: "#skills" },
   { label: "PROJETOS", href: "#projetos" },
   { label: "BLOG", href: "#blog" },
   { label: "CONTATO", href: "#contato" },
 ];
 
-function Star({ size = 24 }: { size?: number }) {
+const mobileLinks = [...leftLinks, ...rightLinks];
+
+function Star({ size = 18 }: { size?: number }) {
   return (
     <img
       src={starAsset.url}
@@ -21,7 +26,10 @@ function Star({ size = 24 }: { size?: number }) {
       className="inline-block animate-[spin_10s_linear_infinite]"
       width={size}
       height={size}
-      style={{ display: "inline-block" }}
+      style={{
+        display: "inline-block",
+        filter: "brightness(0) invert(1)",
+      }}
     />
   );
 }
@@ -37,6 +45,9 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const linkClass =
+    "font-mono text-xs uppercase tracking-widest text-[#7a7672] hover:text-[#f0ece4] transition-colors";
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 h-16 transition-all duration-300 ease-in-out ${
@@ -45,19 +56,18 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-2 font-mono font-bold text-white">
-          <span>MLB</span>
-          <Star />
-        </a>
-
+      <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-center md:justify-center">
         <nav className="hidden md:flex items-center gap-6">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="font-mono text-xs uppercase tracking-widest text-[#7a7672] hover:text-[#f0ece4] transition-colors"
-            >
+          {leftLinks.map((l) => (
+            <a key={l.href} href={l.href} className={linkClass}>
+              {l.label}
+            </a>
+          ))}
+          <span className="mx-2 flex items-center" aria-hidden>
+            <Star />
+          </span>
+          {rightLinks.map((l) => (
+            <a key={l.href} href={l.href} className={linkClass}>
               {l.label}
             </a>
           ))}
@@ -65,7 +75,7 @@ export function Navbar() {
 
         <button
           aria-label="Abrir menu"
-          className="md:hidden text-[#f0ece4]"
+          className="md:hidden text-[#f0ece4] ml-auto"
           onClick={() => setOpen(true)}
         >
           <Menu size={22} />
@@ -89,12 +99,12 @@ export function Navbar() {
               </button>
             </div>
             <nav className="flex flex-col gap-5 mt-6">
-              {links.map((l) => (
+              {mobileLinks.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="font-mono text-xs uppercase tracking-widest text-[#7a7672] hover:text-[#f0ece4] transition-colors"
+                  className={linkClass}
                 >
                   {l.label}
                 </a>
