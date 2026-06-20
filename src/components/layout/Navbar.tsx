@@ -12,24 +12,16 @@ const links = [
   { label: "CONTATO", href: "#contato" },
 ];
 
-function Star({ size = 14 }: { size?: number }) {
+function Star({ size = 24 }: { size?: number }) {
   return (
-    <span
+    <img
+      src={starAsset.url}
+      alt=""
       aria-hidden
       className="inline-block animate-[spin_10s_linear_infinite]"
-      style={{
-        width: size,
-        height: size,
-        backgroundColor: "#e05c2a",
-        WebkitMaskImage: `url(${starAsset.url})`,
-        maskImage: `url(${starAsset.url})`,
-        WebkitMaskRepeat: "no-repeat",
-        maskRepeat: "no-repeat",
-        WebkitMaskSize: "contain",
-        maskSize: "contain",
-        WebkitMaskPosition: "center",
-        maskPosition: "center",
-      }}
+      width={size}
+      height={size}
+      style={{ display: "inline-block" }}
     />
   );
 }
