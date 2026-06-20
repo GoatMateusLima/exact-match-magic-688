@@ -17,7 +17,7 @@ export function AboutMe() {
         >
           <div className="w-60 h-60 rounded-full overflow-hidden border-2 border-[var(--color-accent)]" style={{ boxShadow: "0 0 40px rgba(224,92,42,0.2)" }}>
             <img
-              src={profileAsset.url}
+              src="/profile.jpg"
               alt="Mateus Lima Bispo"
               className="w-full h-full object-cover"
             />
