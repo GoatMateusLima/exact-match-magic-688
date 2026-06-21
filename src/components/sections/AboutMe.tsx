@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { SectionLabel } from "../ui/SectionLabel";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import profileImg from "../../assets/perfil.jpg";
+import cvAsset from "../../assets/cv.pdf.asset.json";
+
 
 
 export function AboutMe() {
