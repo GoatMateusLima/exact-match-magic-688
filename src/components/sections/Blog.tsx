@@ -16,8 +16,7 @@ const posts: { title: string; link: string; image?: string }[] = [
   },
   {
     title: "IHC e jornada como desenvolvedor full-stack",
-    link: "https://www.linkedin.com/posts/mateus-lima-bispo-b14a222a8_ihc-desenvolvedor-fullstack-activity-7460415901130141696-i2k9",
-    image: postIhc.url,
+    link: "IHC.jpeg",
   },
 ];
 
