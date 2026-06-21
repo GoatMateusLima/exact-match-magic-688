@@ -80,6 +80,15 @@ export function AboutMe() {
             >
               whatsapp ↗
             </motion.a>
+            <motion.a
+              whileHover={{ y: -2, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              href={cvAsset.url}
+              download="CV_Mateus_Lima_Bispo.pdf"
+              className="border border-[var(--color-accent)] bg-[var(--color-accent)] text-white font-[var(--font-display)] font-medium text-sm px-6 py-3 rounded hover:bg-[var(--color-accent)]/90 transition-colors"
+            >
+              📄 Baixar Currículo
+            </motion.a>
           </div>
         </motion.div>
       </div>
