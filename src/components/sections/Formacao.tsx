@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { SectionLabel } from "../ui/SectionLabel";
 import { education } from "../../data/education";
+import icon from "../../assets/educacao.png";
+import "../../assets/ed.css";
 
 export function Formacao() {
   return (
@@ -29,7 +31,8 @@ export function Formacao() {
                   cursando ? "!border-l-[var(--color-accent)]" : "!border-l-[var(--color-border)]"
                 }`}
               >
-                <div className="text-2xl">{e.icon}</div>
+                <div className="text-2xl"><img className="edIcon" src={icon}/></div>
+                
                 <div className="flex-1">
                   <span
                     className={`inline-block font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-sm border ${

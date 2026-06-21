@@ -1,5 +1,4 @@
 export type Education = {
-  icon: string;
   title: string;
   institution: string;
   location: string;
@@ -9,7 +8,6 @@ export type Education = {
 
 export const education: Education[] = [
   {
-    icon: "🎓",
     title: "Análise e Desenvolvimento de Sistemas",
     institution: "UNICEP – Centro Universitário Central Paulista",
     location: "São Carlos, SP",
@@ -17,7 +15,6 @@ export const education: Education[] = [
     status: "cursando",
   },
   {
-    icon: "🚀",
     title: "Transforme-se — Programador de Sistemas",
     institution: "Serasa Experian · Gerando Falcões · Senac",
     location: "Programa online",
@@ -25,7 +22,6 @@ export const education: Education[] = [
     status: "concluído",
   },
   {
-    icon: "📜",
     title: "Técnico em Desenvolvimento de Sistemas",
     institution: "ETEC Paulino Botelho – Centro Paula Souza",
     location: "São Carlos, SP",
