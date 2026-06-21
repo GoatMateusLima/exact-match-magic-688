@@ -115,7 +115,18 @@ export function Blog() {
                   rel="noopener noreferrer"
                   className="block bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg p-4 hover:border-[var(--color-accent)]/40 transition-colors"
                 >
-                  <div className="aspect-video bg-[var(--color-surface-hover)] rounded mb-3" />
+                  {post.image ? (
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      loading="lazy"
+                      className="aspect-video w-full object-cover rounded mb-3"
+                    />
+                  ) : (
+                    <div className="aspect-video bg-[var(--color-surface-hover)] rounded mb-3 flex items-center justify-center text-[var(--color-text-secondary)] text-xs font-mono">
+                      sem imagem
+                    </div>
+                  )}
                   <p className="font-[var(--font-body)] text-[var(--color-text-primary)] text-sm font-medium">
                     {post.title}
                   </p>
