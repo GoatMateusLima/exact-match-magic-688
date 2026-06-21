@@ -1,22 +1,23 @@
 import { SectionLabel } from "../ui/SectionLabel";
-import postAppInventor from "@/assets/post-appinventor.png.asset.json";
-import postTransformese from "@/assets/post-transformese.png.asset.json";
-import postIhc from "@/assets/post-ihc.png.asset.json";
+import postAppInventor from "@/assets/appInventor.jpeg";
+import postTransformese from "@/assets/serasaEX.jpeg";
+import postIhc from "@/assets/IHC.jpeg";
 
 const posts: { title: string; link: string; image?: string }[] = [
   {
-    title: "Java, desenvolvimento mobile e App Inventor",
+    title: "Desenvolvimento mobile e App Inventor",
     link: "https://www.linkedin.com/posts/mateus-lima-bispo-b14a222a8_java-desenvolvimentomobile-appinventor-activity-7473198019186900992-aGPf",
-    image: postAppInventor.url,
+    image: postAppInventor,
   },
   {
     title: "Transforme-se | Serasa Experian",
     link: "https://www.linkedin.com/posts/mateus-lima-bispo-b14a222a8_transformese-serasa-serasaexperian-activity-7463601523940384769-HUsX",
-    image: postTransformese.url,
+    image: postTransformese,
   },
   {
     title: "IHC e jornada como desenvolvedor full-stack",
-    link: "IHC.jpeg",
+    link: "https://www.linkedin.com/in/mateus-lima-bispo-b14a222a8/",
+    image: postIhc,
   },
 ];
 

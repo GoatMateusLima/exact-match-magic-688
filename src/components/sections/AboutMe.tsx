@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { SectionLabel } from "../ui/SectionLabel";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
 import profileImg from "../../assets/perfil.jpg";
-import cvAsset from "../../assets/cv.pdf.asset.json";
+import cvAsset from "../../assets/CV_Mateus_Lima_Bispo.pdf";
 
 
 
@@ -83,11 +83,11 @@ export function AboutMe() {
             <motion.a
               whileHover={{ y: -2, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href={cvAsset.url}
+              href={cvAsset}
               download="CV_Mateus_Lima_Bispo.pdf"
-              className="border border-[var(--color-accent)] bg-[var(--color-accent)] text-white font-[var(--font-display)] font-medium text-sm px-6 py-3 rounded hover:bg-[var(--color-accent)]/90 transition-colors"
+              className="border border-[var(--color-border)] text-[var(--color-text-primary)] bg-[var(--color-accent)] font-[var(--font-display)] font-medium text-sm px-6 py-3 rounded hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
             >
-              📄 Baixar Currículo
+              Baixar Currículo
             </motion.a>
           </div>
         </motion.div>

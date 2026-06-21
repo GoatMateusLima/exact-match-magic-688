@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { SpotlightBg } from "../ui/SpotlightBg";
 import { TerminalText } from "../ui/TerminalText";
+import cvAsset from "../../assets/CV_Mateus_Lima_Bispo.pdf";
 
 const stats = [
   { value: "3", label: "projetos deployados" },
@@ -113,7 +114,8 @@ export function Hero() {
             <motion.a
               whileHover={{ y: -2, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href="#"
+              href={cvAsset}
+              download="CV_Mateus_Lima_Bispo.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-[var(--color-border)] text-[var(--color-text-secondary)] font-[var(--font-display)] font-medium text-sm px-6 py-3 rounded hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"

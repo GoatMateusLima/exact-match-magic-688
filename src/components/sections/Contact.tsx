@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Youtube } from "lucide-react";
 import { SectionLabel } from "../ui/SectionLabel";
+import cvAsset from "../../assets/CV_Mateus_Lima_Bispo.pdf";
 
 export function Contact() {
   const items = [
     { href: "https://github.com/GoatMateusLima", icon: Github, label: "GitHub" },
     { href: "https://www.linkedin.com/in/mateus-lima-bispo-b14a222a8", icon: Linkedin, label: "LinkedIn" },
-    { href: "#", icon: Youtube, label: "YouTube" },
+    { href: "https://www.youtube.com/@mateuslimabispo", icon: Youtube, label: "YouTube" },
   ];
 
   return (
@@ -41,7 +42,8 @@ export function Contact() {
           variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
           whileHover={{ y: -3, scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          href="#"
+          href={cvAsset}
+          download="CV_Mateus_Lima_Bispo.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-[var(--color-accent)] text-white font-[var(--font-display)] font-bold text-sm px-10 py-4 rounded shadow-[0_10px_40px_-10px_rgba(224,92,42,0.5)] hover:bg-[var(--color-accent)]/90 transition-colors"
