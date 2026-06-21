@@ -1,17 +1,20 @@
 import { SectionLabel } from "../ui/SectionLabel";
 
-const posts = [
+const posts: { title: string; link: string; image?: string }[] = [
   {
     title: "Java, desenvolvimento mobile e App Inventor",
     link: "https://www.linkedin.com/posts/mateus-lima-bispo-b14a222a8_java-desenvolvimentomobile-appinventor-activity-7473198019186900992-aGPf",
+    image: "",
   },
   {
     title: "Transforme-se | Serasa Experian",
     link: "https://www.linkedin.com/posts/mateus-lima-bispo-b14a222a8_transformese-serasa-serasaexperian-activity-7463601523940384769-HUsX",
+    image: "",
   },
   {
     title: "IHC e jornada como desenvolvedor full-stack",
     link: "https://www.linkedin.com/posts/mateus-lima-bispo-b14a222a8_ihc-desenvolvedor-fullstack-activity-7460415901130141696-i2k9",
+    image: "",
   },
 ];
 
