@@ -72,7 +72,7 @@ export function Hero() {
             className="font-[var(--font-body)] text-[var(--color-text-secondary)] text-base leading-relaxed mb-10 max-w-lg"
           >
             Construo APIs REST, integro serviços de IA e entrego sistemas que funcionam em produção.
-            Estudante de ADS na UNICEP, ex-Transforme-se.
+            Estudante de ADS na UNICEP,<br/> ex-Transforme-se.
           </motion.p>
 
           <motion.div
@@ -120,6 +120,7 @@ export function Hero() {
             >
               DOWNLOAD CV
             </motion.a>
+            
           </motion.div>
         </div>
       </div>

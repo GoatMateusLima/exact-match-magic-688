@@ -2,9 +2,29 @@ import { Youtube } from "lucide-react";
 import { SectionLabel } from "../ui/SectionLabel";
 
 const posts = [
-  { title: "Como construí minha primeira API com Spring Boot" },
-  { title: "Minha jornada no programa Transforme-se" },
+  { title: "Como construí minha primeira API com Spring Boot",
+    link: "",
+  },
+  { title: "Minha jornada no programa Transforme-se",
+    link: ""
+   },
 ];
+
+const canal = [
+  {
+    title: "Um dia na VIDA de um PROGRAMADOR e UNIVERSITÁRIO | Vlog",
+    link: "https://youtu.be/_gHYcxYZYLI?si=NXbxoOjXjBdihHIF"
+  },
+  {
+    title: "ATS: O Erro que Faz Seu Currículo Ser Ignorado",
+    link: "https://youtu.be/sGUks3_xpCE?si=pJFddAi16eMGEdZr"
+  },
+  {
+    title: "",
+    link: ""
+  },
+
+]
 
 export function Blog() {
   return (
@@ -24,7 +44,7 @@ export function Blog() {
               <p className="text-[var(--color-text-secondary)] text-sm font-mono">Em breve</p>
             </div>
             <a
-              href="#"
+              href="https://www.youtube.com/@mateuslimabispo"
               target="_blank"
               rel="noopener noreferrer"
               className="font-mono text-xs text-[var(--color-accent)] mt-4 inline-block hover:underline"

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { SectionLabel } from "../ui/SectionLabel";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
-import profileImg from "../../assets/profile.jpg";
+import profileImg from "../../assets/perfil.jpg";
 
 
 export function AboutMe() {
@@ -18,7 +18,7 @@ export function AboutMe() {
         >
           <div className="w-60 h-60 rounded-full overflow-hidden border-2 border-[var(--color-accent)]" style={{ boxShadow: "0 0 40px rgba(224,92,42,0.2)" }}>
             <img
-              src="/profile.jpg"
+              src={profileImg}
               alt="Mateus Lima Bispo"
               className="w-full h-full object-cover"
             />
@@ -48,22 +48,36 @@ export function AboutMe() {
             crescer, contribuir e aprender com times que constroem sistemas escaláveis.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a
+            <motion.a
+              whileHover={{ y: -2, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               href="https://www.linkedin.com/in/mateus-lima-bispo-b14a222a8"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[var(--color-border)] text-[var(--color-text-secondary)] text-sm px-4 py-2 rounded hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
+              className="border border-[var(--color-border)] text-[var(--color-text-secondary)] font-[var(--font-display)] font-medium text-sm px-6 py-3 rounded hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
             >
               LinkedIn ↗
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              whileHover={{ y: -2, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               href="https://github.com/GoatMateusLima"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-[var(--color-border)] text-[var(--color-text-secondary)] text-sm px-4 py-2 rounded hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
+              className="border border-[var(--color-border)] text-[var(--color-text-secondary)] font-[var(--font-display)] font-medium text-sm px-6 py-3 rounded hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
             >
               GitHub ↗
-            </a>
+            </motion.a>
+            <motion.a
+              whileHover={{ y: -2, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              href="https://wa.me/5516991124622"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-[var(--color-border)] text-[var(--color-text-secondary)] font-[var(--font-display)] font-medium text-sm px-6 py-3 rounded hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
+            >
+              whatsapp ↗
+            </motion.a>
           </div>
         </motion.div>
       </div>

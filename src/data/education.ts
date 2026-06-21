@@ -17,7 +17,7 @@ export const education: Education[] = [
   {
     title: "Transforme-se — Programador de Sistemas",
     institution: "Serasa Experian · Gerando Falcões · Senac",
-    location: "Programa online",
+    location: "São Carlos, SP",
     period: "Set/2025 – Abr/2026",
     status: "concluído",
   },
